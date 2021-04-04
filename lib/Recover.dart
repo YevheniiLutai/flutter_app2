@@ -68,7 +68,7 @@ class _LoginDemoState extends State<LoginDemo> {
                   color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
 
               child: Text(
-                'Enter your email',
+                'Enter your code',
                 style: TextStyle(color: Color(0xff050036), fontSize: 25),
               ),
 
@@ -86,16 +86,13 @@ class _LoginDemoState extends State<LoginDemo> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)
                     ),
-                    labelText: 'Email',
-                    hintText: 'Enter your email'),
+                    labelText: 'Code',
+                    hintText: 'Enter your code'),
               ),
             ),
+
             SizedBox(
-              height: 15,
-            ),
-            Text('We send code on your email!'),
-            SizedBox(
-              height: 210,
+              height: 230,
             ),
             Container(
               height: 50,
@@ -108,7 +105,7 @@ class _LoginDemoState extends State<LoginDemo> {
                       context, MaterialPageRoute(builder: (_) => HomePage()));
                 },
                 child: Text(
-                  'Next step',
+                  'Recover',
                   style: TextStyle(color: Color(0xff050036), fontSize: 25),
                 ),
               ),

@@ -35,30 +35,13 @@ class _LoginDemoState extends State<LoginDemo> {
             SizedBox(
               height: 50,
             ),
-            Container(
-              height: 34,
-              width: 135,
-              decoration: BoxDecoration(
-                  color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
-              child: FlatButton(
 
-                child: Text(
-                  'Woow',
-                  style: TextStyle(color: Color(0xff050036), fontSize: 30),
-                ),
-              ),
+            SizedBox(
+              height: 15,
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 60.0),
-              child: Center(
-                child: Container(
-                    width: 200,
-                    height: 150,
-                    /*decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(50.0)),*/
-                    child: Image.asset('asset/images/flutter-logo.png')),
-              ),
+
+            SizedBox(
+              height: 25,
             ),
             Container(
               height: 55,
@@ -66,12 +49,19 @@ class _LoginDemoState extends State<LoginDemo> {
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                   color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
-
-              child: Text(
-                'Enter your email',
-                style: TextStyle(color: Color(0xff050036), fontSize: 25),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                },
+                child: Text(
+                  'New password',
+                  style: TextStyle(color: Color(0xff050036), fontSize: 25),
+                ),
               ),
-
+            ),
+            SizedBox(
+              height: 15,
             ),
             Padding(
               padding: const EdgeInsets.only(
@@ -86,20 +76,17 @@ class _LoginDemoState extends State<LoginDemo> {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10)
                     ),
-                    labelText: 'Email',
-                    hintText: 'Enter your email'),
+                    labelText: '',
+                    hintText: 'Enter new password'),
               ),
             ),
             SizedBox(
-              height: 15,
-            ),
-            Text('We send code on your email!'),
-            SizedBox(
-              height: 210,
+              height: 25,
             ),
             Container(
-              height: 50,
-              width: 170,
+              height: 55,
+              width: 360,
+              alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
                   color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
               child: FlatButton(
@@ -108,7 +95,46 @@ class _LoginDemoState extends State<LoginDemo> {
                       context, MaterialPageRoute(builder: (_) => HomePage()));
                 },
                 child: Text(
-                  'Next step',
+                  'New password',
+                  style: TextStyle(color: Color(0xff050036), fontSize: 25),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+              //padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+
+                obscureText: true,
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    labelText: '',
+                    hintText: 'Enter confirm password'),
+              ),
+            ),
+            SizedBox(
+              height: 150,
+            ),
+            Container(
+              height: 55,
+              width: 360,
+              decoration: BoxDecoration(
+                  color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => HomePage()));
+                },
+                child: Text(
+                  'Login',
                   style: TextStyle(color: Color(0xff050036), fontSize: 25),
                 ),
               ),
@@ -116,7 +142,6 @@ class _LoginDemoState extends State<LoginDemo> {
             SizedBox(
               height: 130,
             ),
-
           ],
         ),
       ),
