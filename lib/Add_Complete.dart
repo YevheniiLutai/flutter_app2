@@ -40,13 +40,11 @@ class _LoginDemoState extends State<LoginDemo> {
               width: 135,
               decoration: BoxDecoration(
                   color: Color(0xfff14726), borderRadius: BorderRadius.circular(10)),
-              child: FlatButton(
 
                 child: Text(
                   'Woow',
                   style: TextStyle(color: Color(0xff050036), fontSize: 30),
                 ),
-              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 60.0),
